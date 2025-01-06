@@ -1,6 +1,6 @@
-Proyecto de Microservicios en .NET 8
+Proyecto de Microservicios en .NET CORE 3.1
 
-✨ Este proyecto implementa una arquitectura de microservicios utilizando .NET 8 con diferentes bases de datos y comunicación asíncrona. Incluye integración con RabbitMQ, pruebas unitarias con mocks, un API Gateway y despliegue mediante Docker.
+✨ Este proyecto implementa una arquitectura de microservicios utilizando .NET CORE 3.1 con diferentes bases de datos y comunicación asíncrona. Incluye integración con RabbitMQ, pruebas unitarias con mocks, un API Gateway y despliegue mediante Docker.
 
 🌐 Estructura del Proyecto
 
