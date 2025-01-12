@@ -40,7 +40,7 @@ namespace TiendaServicios.Api.CarritoCompra
             //3 configurar los endpoints de los otros microservicios a los que se desea consumir
             //estos deben configurarse en el appsettings y se encuentran en properties launchsettings
 
-            //4. agregar el HttpClient
+            //4. agregar la configuracion de HttpClient
             services.AddHttpClient("Libros", config =>
             {
                 config.BaseAddress = new Uri(Configuration["Services:Libros"]);
