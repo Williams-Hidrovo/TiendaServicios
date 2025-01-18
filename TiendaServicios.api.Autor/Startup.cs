@@ -32,7 +32,7 @@ namespace TiendaServicios.api.Autor
             //1. cnfigurar la cadena de conexion y el dbcontext
             services.AddDbContext<ContextoAutor>(options =>
             {
-                options.UseNpgsql(Configuration.GetConnectionString("defaultConnectiondock"));
+                options.UseNpgsql(Configuration.GetConnectionString("defaultConnection"));
             });
 
             //2. llamar al servicio mediaTR

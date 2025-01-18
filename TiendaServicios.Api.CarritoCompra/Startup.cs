@@ -47,7 +47,9 @@ namespace TiendaServicios.Api.CarritoCompra
             });
 
             //5 configurar la inyeccion de servicios e interfaces
-            services.AddScoped<ILibrosService, LibroService>();
+
+            
+            services.AddScoped<ILibrosService, LibroService>(); //consume el microservicio de Libro
 
             
 
