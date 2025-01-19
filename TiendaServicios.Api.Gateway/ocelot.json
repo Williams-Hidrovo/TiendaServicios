@@ -1,0 +1,99 @@
+{
+  "Routes": [
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/LibroMaterial",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.libro",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/Libro",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "Key": "LibroTotal"
+    },
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/LibroMaterial/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.libro",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/Libro/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/Autor",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.autor",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/Autor",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ],
+      "Key": "AutorTotal"
+    },
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/Autor/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.autor",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/Autor/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/CarritoCompras",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.carritocompra",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/CarritoCompras",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    },
+    {
+      //de cara al servidor
+      "DownstreamPathTemplate": "/api/CarritoCompras/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "tiendaservicios.api.carritocompra",
+          "Port": 80
+        }
+      ],
+      //de cara al cliente
+      "UpstreamPathTemplate": "/CarritoCompras/{id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    }
+  ],
+  "Aggregates": [
+    {
+      "RouteKeys": [
+        "LibroTotal",
+        "AutorTotal"
+      ],
+      "UpstreamPathTemplate": "/LibroAutor"
+    }
+  ]
+}
